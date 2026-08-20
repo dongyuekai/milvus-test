@@ -2,7 +2,7 @@ import "dotenv/config";
 import { MilvusClient, DataType, MetricType, IndexType } from '@zilliz/milvus2-sdk-node';
 import { OpenAIEmbeddings } from "@langchain/openai";
 
-const COLLECTION_NAME = 'ai_diary';
+const COLLECTION_NAME = 'ai_diary2';
 const VECTOR_DIM = 1024;
 
 const embeddings = new OpenAIEmbeddings({
@@ -46,6 +46,7 @@ async function main() {
 
     // 创建索引
     console.log('\nCreating index...');
+    // 向量字段需要创建索引
     await client.createIndex({
       collection_name: COLLECTION_NAME,
       field_name: 'vector',
