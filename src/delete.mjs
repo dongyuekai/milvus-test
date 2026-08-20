@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { MilvusClient } from '@zilliz/milvus2-sdk-node';
 
-const COLLECTION_NAME = 'ai_diary';
+const COLLECTION_NAME = 'ai_diary2';
 
 const client = new MilvusClient({
   address: 'localhost:19530'

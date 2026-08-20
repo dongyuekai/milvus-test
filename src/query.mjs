@@ -2,7 +2,7 @@ import 'dotenv/config'
 import { MilvusClient, MetricType } from '@zilliz/milvus2-sdk-node'
 import { OpenAIEmbeddings } from '@langchain/openai'
 
-const COLLECTION_NAME = 'ai_diary'
+const COLLECTION_NAME = 'ai_diary2'
 const VECTOR_DIM = 1024
 
 const embeddings = new OpenAIEmbeddings({
